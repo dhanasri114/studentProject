@@ -8,5 +8,5 @@ import com.college.studends.details.Student;
 @Repository
 public interface Student_repo extends JpaRepository<Student, Integer>
 {
-	
+	 Student findByName(String name);
 }

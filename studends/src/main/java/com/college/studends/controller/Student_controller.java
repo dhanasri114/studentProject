@@ -40,6 +40,12 @@ public class Student_controller
 		return service.readStudent();
 	}
 	
+	@GetMapping("/read/name/{name}")
+	public Student getName(@PathVariable String name)
+	{
+		return service.readByname(name);
+	}
+	
 	@PutMapping("/update/student/id/name/{id}/{name}")
 	public Student modiftStudentName(@PathVariable int id, @PathVariable String name)
 	{

@@ -31,6 +31,11 @@ public class Student_service
 		return repo.findAll();
 	}
 	
+	public Student readByname(String name)
+	{
+		return repo.findByName(name);
+	}
+	
 	public Student updateName(int id,String name)
 	{
 		Student stu=repo.findById(id).orElseThrow(()->new RuntimeException("id not found"));
